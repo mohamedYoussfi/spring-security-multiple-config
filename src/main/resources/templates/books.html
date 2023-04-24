@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="p-3">
+      <table class="table">
+          <thead>
+          <tr>
+              <th>ID</th><th>Title</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr th:each="b:${books}">
+              <td th:text="${b.id}"></td>
+              <td th:text="${b.title}"></td>
+          </tr>
+          </tbody>
+      </table>
+  </div>
+</body>
+</html>
